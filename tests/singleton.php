@@ -2,13 +2,18 @@
 
 class DatabaseConnection
 {
-	private __construct() {
-	}
 
-	public static function Connection()
-	{
-		return new __CLASS__;
-	}
+    private static $_singleton;
+    private $dbHandle;
+
+	private function __construct() {}
+
+	public static function Connection() {
+        if(!self::$_singleton) {
+            self::$_singleton = new DatabaseConnection();
+        }
+        return self::$_singleton;
+    }
 
 }
 
