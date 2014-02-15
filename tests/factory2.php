@@ -1,27 +1,27 @@
 <?php
+
 interface IUser
 {
-  function getName();
+    function getId();
 }
 
 class User implements IUser
 {
-  public function __construct( $id ) { }
+    private $_id;
 
-  public function getName()
-  {
-    return "Jack";
-  }
+    public function __construct($id) 
+    { 
+        $this->_id = $id;
+    }
 }
 
 class UserFactory
 {
-  public static function Create( $id )
-  {
-    return new User( $id );
-  }
+    public static function Create($id)
+    {
+        return new User($id);
+    }
 }
 
-$uo = UserFactory::Create( 1 );
-echo( $uo->getName()."\n" );
-?>
+$uo = UserFactory::Create(1);
+echo ($uo->getName() . "\n");
