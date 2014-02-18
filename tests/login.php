@@ -17,12 +17,12 @@ class MyLogin implements LoginInterface
 		$this->_password = $password;
 	}
 
-	public function getUsername()
+	protected function _getUsername()
 	{
 		return $this->_username;
 	}
 
-	public function getPassword()
+	protected function _getPassword()
 	{
 		return $this->_password;
 	}
@@ -54,7 +54,7 @@ class MyClass
 		$this->_username = $username;
 	}
 
-	public function getUsername($username)
+	public function getUsername()
 	{
 		if (empty($this->_username)) {
 			$this->_username = 'username';
@@ -66,7 +66,7 @@ class MyClass
 		$this->_password = $password;
 	}
 
-	public function getPassword($password)
+	public function getPassword()
 	{
 		if (empty($this->_password)) {
 			$this->_username = 'password';
