@@ -5,7 +5,9 @@ class DatabaseConnection
 
     private static $_singleton;
 
-	private function __construct() {}
+	private function __construct() {
+        //db connection code
+    }
 
 	public static function Connection() {
         if(!self::$_singleton) {
