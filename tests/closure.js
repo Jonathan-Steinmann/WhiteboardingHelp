@@ -6,7 +6,7 @@
 	    };
 	};
 	 
-	for ( var i = 0; i < 5; i++ ) {
+	for (var i = 0; i < 5; i++) {
 	    setTimeout( createFunction( i ), i * 100 );
 	}
 

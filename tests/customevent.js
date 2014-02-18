@@ -1,5 +1,4 @@
 
-
 $("body").delegate("p", "myCustomEvent", function(e, myName, myValue) {
 	$(this).text("Hi there!");
 	$("span")
