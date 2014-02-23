@@ -3,7 +3,6 @@
 interface Login
 {
     public function getUsername(){}
-
     public function getPassword(){}
 }
 
