@@ -104,4 +104,4 @@ $searchId = $exercise->fetchDataById(123);
 
 $searchAll = $exercise->searchData($exercise::FIRST, 'first1');
 
-
+var_dump($searchAll);

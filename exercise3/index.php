@@ -59,3 +59,4 @@ $array = $exercise->arrayDiffer($numbers1, $numbers2);
 
 array_multisort($array);
 
+var_dump($array);
